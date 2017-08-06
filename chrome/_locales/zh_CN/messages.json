@@ -1,0 +1,26 @@
+{
+  "appName": {
+    "message": "亚马逊数据眼",
+    "description": "应用名称"
+  },
+  "appDesc": {
+    "message": "强大的亚马逊数据工程应用.",
+    "description": "应用描述"
+  },
+  "topbar_navigation": {
+    "message": "快速导航",
+    "description": "顶部工具栏:快速导航"
+  },
+  "topbar_search_string": {
+    "message": "搜索商品分类...",
+    "description": "顶部工具栏:搜索商品分类输入框提示"
+  },
+  "topbar_amazon_home": {
+    "message": "亚马逊首页",
+    "description": "顶部工具栏:快速导航:亚马逊首页"
+  },
+  "topbar_data_collect": {
+    "message": "数据采集",
+    "description": "顶部工具栏:数据采集"
+  }
+}

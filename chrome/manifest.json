@@ -1,0 +1,78 @@
+{
+  "manifest_version": 2,
+  "name": "__MSG_appName__",
+  "version": "1.0.2",
+  "description": "__MSG_appDesc__",
+  "default_locale": "zh_CN",
+  "minimum_chrome_version": "49",
+  "offline_enabled": true,
+  "short_name": "AMZEye",
+  "icons": {
+    "16": "images/16.png",
+    "19": "images/19.png",
+    "32": "images/32.png",
+    "48": "images/48.png",
+    "64": "images/64.png",
+    "96": "images/96.png",
+    "128": "images/128.png"
+  },
+  "background": {
+    "page": "background.html",
+    "persistent": false
+  },
+  "page_action": {
+    "default_icon": "images/32.png",
+    "default_title": "__MSG_appName__"
+  },
+  "content_scripts": [
+    {
+      "run_at": "document_end",
+      "matches": [
+        "*://www.amazon.com/*",
+        "*://www.amazon.ca/*",
+        "*://www.amazon.es/*",
+        "*://www.amazon.it/*",
+        "*://www.amazon.de/*",
+        "*://www.amazon.fr/*",
+        "*://www.amazon.cn/*",
+        "*://www.amazon.in/*",
+        "*://www.amazon.com.mx/*",
+        "*://www.amazon.co.uk/*",
+        "*://www.amazon.co.jp/*",
+        "*://*.ssl-images-amazon.com/*"
+      ],
+      "css": [
+        "styles/content_script.css"
+      ],
+      "js": [
+        "scripts/vendor.js",
+        "scripts/content_script.js"
+      ]
+    }
+  ],
+  "web_accessible_resources": [
+    "*"
+  ],
+  "content_security_policy": "script-src 'self' https://www.google-analytics.com; object-src 'self'",
+  "optional_permissions": [
+    "cookies"
+  ],
+  "permissions": [
+    "storage",
+    "alarms",
+    "tabs",
+    "activeTab",
+    "management",
+    "proxy",
+    "notifications",
+    "background",
+    "contextMenus",
+    "unlimitedStorage",
+    "downloads",
+    "gcm",
+    "identity",
+    "webNavigation",
+    "declarativeContent",
+    "<all_urls>"
+  ]
+}
